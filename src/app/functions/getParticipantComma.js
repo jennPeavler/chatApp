@@ -1,0 +1,1 @@
+export const getParticipantComma = ({ participants, i}) => i === participants?.length - 1 ? '' : ',';
