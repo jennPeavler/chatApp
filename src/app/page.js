@@ -3,15 +3,18 @@ import { ChatWindow } from './components/ChatWindow';
 import { ConversationList } from './components/ConversationList';
 
 import { ConversationProvider } from './context/ConversationContext';
+import { UserProvider } from './context/UserContext';
 
 export default function Home() {
   return (
-    <ConversationProvider>
-      <main style={style.body}>
-        <ConversationList />
-        <ChatWindow />
-      </main>
-    </ConversationProvider>
+    <UserProvider>
+      <ConversationProvider>
+        <main style={style.body}>
+          <ConversationList />
+          <ChatWindow />
+        </main>
+      </ConversationProvider>
+    </UserProvider>
   )
 }
 

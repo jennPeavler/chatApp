@@ -8,7 +8,7 @@ export const Conversation = ({ conversation }) => {
 
   const MessageItem = ({ message }) => {
     return (
-      <div style={{ display: 'flex', alignItems: 'center'}}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem'}}>
         <img style={style.author} src={authorMap[message.authorId].avatarUrl} alt="Author avatar" />
         <div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
